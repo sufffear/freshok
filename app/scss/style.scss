@@ -5,7 +5,68 @@
 
 
 
+.header {
 
+  &__top {
+    padding: 15px 0 17px;
+    background-color: $dark-800;
+  }
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+  }
+  &__location-link {
+    padding: 5px 5px;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+  &__link {
+    padding: 5px 5px;
+  }
+}
+
+.link--car {
+  background-image: url(../images/icons/delcar-icon.svg);
+  padding-left: 42px;
+  background-size: 32px 22px;
+  margin-right: 45px;
+}
+.link--phone {
+  background-image: url(../images/icons/tel-icon.svg);
+  padding-left: 32px;
+  background-size: 22px 22px;
+}
+
+.header__location-link,
+.header__link {
+  border-radius: 3px;
+  transition: opacity 0.5s, box-shadow 0.5s, color 0.5s;
+}
+
+.header__location-link:hover,
+.header__link:hover {
+  opacity: 0.7;
+}
+
+.header__location-link:active,
+.header__link:active {
+  color: #E0EDCF;
+}
+
+.header__location-link:focus,
+.header__link:focus {
+  box-shadow: 0 0 0 3px #EFF6E7;
+}
 
 @import 'media';
-
